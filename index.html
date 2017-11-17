@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109846499-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109846499-1');
+	</script>
 
 	<!-- Google Analytics -->
 	<script>
@@ -61,6 +70,7 @@
 
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
+		  ga('send', 'event', 'Search', 'search', 'Map');
         });
       }
 
