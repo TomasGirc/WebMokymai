@@ -56,7 +56,7 @@
   <body>
     <div id="floating-panel">
       <input id="address" type="textbox" value="Vilnius">
-      <input id="submit" type="button" value="Geocode">
+      <input id="submit" type="button" value="Geocode" ga('send', 'event', 'Search', 'search', 'Geocode');>
     </div>
 	<p>q24A8SP4pSRwBnMJxj6n8sdgkx29zYAh</p>
     <div id="map"></div>
@@ -70,7 +70,6 @@
 
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
-		  ga('send', 'event', 'Search', 'search', 'Map');
         });
       }
 
